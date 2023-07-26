@@ -1,8 +1,8 @@
 # COG test
 
 ## COG data
-* Original files
-  * ftp://ftp.ncbi.nlm.nih.gov/pub/COG/COG/
+* Original data file
+  * ftp://ftp.ncbi.nlm.nih.gov/pub/COG/old/ALL.tar
 * Data provider
   * National Center for Biotechnology Information
 * License
