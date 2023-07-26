@@ -1,0 +1,51 @@
+The data in this directory are associated with the COG database
+(http://www.ncbi.nlm.nih.gov/COG/), described in: 
+
+Tatusov RL, Koonin EV, Lipman DJ.  1997. A genomic perspective on protein 
+   families. Science 278: 631-637.
+Koonin EV, Tatusov RL, Galperin MY. 1998. Beyond complete genomes: from 
+   sequence to structure and function. Curr Opin Struct Biol. 8: 355-363.
+Tatusov RL, Galperin MY, Natale DA, Koonin EV. 2000. The COG database: 
+   a tool for genome-scale analysis of protein functions and evolution.
+   Nucleic Acids Res. 28: 33-36.
+Tatusov RL, Darren A. Natale DA, Tatusova TA, Shankavaram UT, Rao SB, Kiryutin B, Garkavtsev IV, Galperin MY, Fedorova NV, Koonin EV. 2001 COG database:
+   new developments in phylogenetic classification of proteins from 
+   complete genomes.
+   Nucleic Acids Res. 29: 22-28.
+__________________________________________________________________________
+Use all.tar (all.tar.Z) to download the complete content of this directory
+Use COGs.tar (COGs.tar.Z) to download the FASTA libraries for all COGs
+Use aln.tar (aln.tar.Z) to download the ClustalW alignments for all COGs
+To download s small number of COGs or alignments, it may be preferable to
+use the corresponding uncompressed files.
+
+==========================================================================
+Clusters of Orthologous Groups from 44 complete genomes representing
+30 major phylogenetic lineages.
+==========================================================================
+
+COGs.txt   contains information on each COG, including the COG name,
+           functional classification (using a one-letter code), function 
+           description, and the the list of proteins (or domains) from all 
+           44 complete genomes included in the COG database.
+  
+COGs.gene  gene name for each COG,
+  
+COGs/      Directory that, for each COG, contains a FASTA library 
+           of all the proteins/domains included in the COG (e.g. COG0001). 
+                  
+aln/       clustalW alignments for each COG (e.g. COG0001.aln).
+           
+xyva       FASTA file containing all the proteins (or domains) from the 
+           44 complete genomes, including those not included into any COG.
+                     
+fun.txt    explains one-letter functional classification used in the COG
+           database
+           
+org.txt    explains one-letter and 3-letter abbreviations for the species
+           represented in the COG database that are used in the phylogenetic
+           patterns
+                  
+pa         the results of BLAST for all the proteins/domains in the format:
+           a - b (score p-value) astart..astop bstart..bstop,
+           where a and b are protein/domain names.
