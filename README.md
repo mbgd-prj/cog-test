@@ -1,1 +1,1 @@
-# cog-test
+# COG test
