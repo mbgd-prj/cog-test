@@ -22,23 +22,28 @@ while (<>) {
         $COG = $1;
     } elsif (/^  ([A-Za-z]{3}):  (.+)$/) {
         $ORG = $1;
-        print_genes($2);
+        print_members($2);
     } elsif (/^ +(.+)$/) {
-        print_genes($1);
+        print_members($1);
     } else {
         die $_;
     }
 }
 
-sub print_genes {
-    my ($genes) = @_;
+sub print_members {
+    my ($members) = @_;
 
     if (not defined $COG or not defined $ORG) {
         die;
     }
-    my @genes = split(" ", $genes);
-    for my $gene (@genes) {
-        print "$COG $ORG:$gene\n";
+    my @members = split(" ", $members);
+    for my $member (@members) {
+        my $gene = $member;
+        my $domain = 0;
+        if ($member =~ /^(\S+)_(\d)$/) {
+            $gene = $1;
+            $domain = $2;
+        }
+        print "$COG\t$ORG:$gene\t$domain\n";
     }
 }
-
